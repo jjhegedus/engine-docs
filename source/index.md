@@ -7,7 +7,7 @@ order: 0
 
 Apollo Engine is an in-query-path tool that helps you understand what's happening inside your GraphQL layer. It lets you make performance optimizations without changing any code.
 
-Engine runs as a proxy layer in front of your GraphQL server. It provides server performance telemetry (the same functionality as [Apollo Optics](https://www.apollodata.com/optics/)) and can cache query responses from your server.
+Engine runs as a proxy layer in front of your GraphQL server. Engine provides server performance telemetry (the same functionality as [Apollo Optics](https://www.apollodata.com/optics/)) and can also cache query responses from your server.
 
 Instrumenting your app with Engine is twofold.
 1. Add an [Apollo Tracing package](#Apollo-Tracing-Package) (language-specific) to your GraphQL server.
@@ -28,7 +28,7 @@ Engine relies on receiving data in the Apollo Tracing format to create its perfo
 4. **Scala:** [Sangria](https://github.com/sangria-graphql/sangria)
 5. **Elixir:** [Absinthe](https://github.com/absinthe-graphql/absinthe)
 
-Using a different server? [Let us know](mailto:support@apollodata.com) – the development of our tracing agents is community driven and we would love to talk with you!
+Using a different server? [Let us know](mailto:support@apollodata.com) – the development of our tracing agents is community driven and we'd love to chat with you!
 
 ## Engine Proxy
 
@@ -50,7 +50,7 @@ _Server compatibility chart:_
 
 The sidecar is a package that you add to your server. It runs a proxy next to your server, in the same container or environment as your server.
 
-The sidecar package includes a pre-built Engine proxy binary; this binary spawns an Engine process side-by-side with the your GraphQL server's process. Incoming GraphQL operations get routed through the proxy and then into your server.
+The sidecar package includes a pre-built Engine proxy binary. This binary spawns an Engine process side-by-side with the your GraphQL server's process. Incoming GraphQL operations get routed through the proxy and then into your server.
 
 If you are already using [Apollo Optics](https://www.apollodata.com/optics/), the sidecar does not have to replace the [Optics agent](https://github.com/apollographql/optics-agent-js) (which is a tracing agent). You can run the Engine proxy and an Apollo Tracing package in conjunction with the Optics agent, which uses a slightly different data format to report trace information.
 
@@ -60,7 +60,7 @@ _Choose this configuration in environments where you don't want to orchestrate a
 
 **Available for:** All servers (Node, Java, Scala, Ruby, and Elixir)
 
-This is a Docker container that contains the Engine proxy process. You would use this option if you want to deploy and manage the Engine proxy as a separate process from your GraphQL server.
+This is a Docker container that contains the Engine proxy process. Use this option if you want to deploy and manage the Engine proxy as a separate process from your GraphQL server.
 
 The Engine proxy should be configured to sit in front of your GraphQL server, so that requests to your app can pass through it.
 
