@@ -5,9 +5,9 @@ order: 0
 
 ## What is Apollo Engine?
 
-Apollo Engine is an in-query-path tool that helps you understand what's happening inside your GraphQL layer and perform performance optimizations without changing any of your server's code.
+Apollo Engine is an in-query-path tool that helps you understand what's happening inside your GraphQL layer. It lets you make performance optimizations without changing any code.
 
-Engine runs as a proxy layer in front of your GraphQL server, providing server performance telemetry (the same functionality as [Apollo Optics](https://www.apollodata.com/optics/)) and is able to cache entire query responses from your server.
+Engine runs as a proxy layer in front of your GraphQL server. It provides server performance telemetry (the same functionality as [Apollo Optics](https://www.apollodata.com/optics/)) and can cache query responses from your server.
 
 Instrumenting your app with Engine is twofold.
 1. Add an [Apollo Tracing package](#Apollo-Tracing-Package) (language-specific) to your GraphQL server.
@@ -19,7 +19,7 @@ Instrumenting your app with Engine is twofold.
 
 [Apollo Tracing](https://github.com/apollographql/apollo-tracing) is a GraphQL response format extension to expose trace data for GraphQL requests.
 
-Apollo Tracing packages are language-specific packages that, once installed on a server, augment that server's GraphQL responses with the specified trace data format.
+Apollo Tracing packages augment your server's GraphQL responses with the specified trace data format.
 
 Engine relies on receiving data in the Apollo Tracing format to create its performance telemetry reports. There are currently tracing packages using the Apollo Tracing format for the following GraphQL servers:
 1. **Node:** [Apollo Server](https://github.com/apollographql/apollo-server) (Express, Hapi, Koa, Restify, and Lambda); [Express-GraphQL](https://github.com/graphql/express-graphql)
@@ -28,7 +28,7 @@ Engine relies on receiving data in the Apollo Tracing format to create its perfo
 4. **Scala:** [Sangria](https://github.com/sangria-graphql/sangria)
 5. **Elixir:** [Absinthe](https://github.com/absinthe-graphql/absinthe)
 
-Using a different server? [Let us know](mailto:support@apollodata.com) – the development of our tracing agents is community driven and we would love to start a conversation with you!
+Using a different server? [Let us know](mailto:support@apollodata.com) – the development of our tracing agents is community driven and we would love to talk with you!
 
 ## Engine Proxy
 
@@ -48,9 +48,9 @@ _Server compatibility chart:_
 
 **Available for:** Node servers (Apollo Server and Express-GraphQL)
 
-The sidecar is a language-specific package that you add to your server. It runs a proxy next to your server in the same container as your server.
+The sidecar is a package that you add to your server. It runs a proxy next to your server, in the same container or environment as your server.
 
-The sidecar package includes a pre-built copy of the Engine proxy binary. It spawns an Engine process side-by-side with the your GraphQL server's process and incoming GraphQL operations get routed through the proxy and then into your server.
+The sidecar package includes a pre-built Engine proxy binary; this binary spawns an Engine process side-by-side with the your GraphQL server's process. Incoming GraphQL operations get routed through the proxy and then into your server.
 
 If you are already using [Apollo Optics](https://www.apollodata.com/optics/), the sidecar does not have to replace the [Optics agent](https://github.com/apollographql/optics-agent-js) (which is a tracing agent). You can run the Engine proxy and an Apollo Tracing package in conjunction with the Optics agent, which uses a slightly different data format to report trace information.
 
