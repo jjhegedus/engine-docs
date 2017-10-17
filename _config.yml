@@ -23,7 +23,7 @@ sidebar_categories:
     - upgrade-optics
   Reference:
     - proto-doc
-github_repo: mdg-private/engine-docs
+github_repo: apollographql/engine-docs
 content_root: source
 
 social_links:
