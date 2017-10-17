@@ -30,7 +30,7 @@ Engine relies on receiving data in the Apollo Tracing format to create its perfo
 
 Using a different server? [Let us know](mailto:support@apollodata.com) – the development of our tracing agents is community driven and we would love to start a conversation with you!
 
-<h2 id="engine-proxy" title="Engine Proxy>Engine Proxy</h2>
+<h2 id="engine-proxy" title="Engine Proxy">Engine Proxy</h2>
 
 There are two options for deploying the Engine proxy. You can deploy it either as a [sidecar package](/#Option-1-Sidecar-Package) that runs next to your server, or as a [standalone docker container](/#Option-2-Standalone-Docker-Container).
 
