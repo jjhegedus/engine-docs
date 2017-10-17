@@ -2,6 +2,7 @@
 title: Proxy config file
 order: 20
 ---
+<h3 id="config" title="Config">Config</h3>
 The "Config" message defines the type of Apollo Engine Proxy's JSON configuration file. The JSON file encodes one instance of this message, using [standard proto3 JSON mapping](https://developers.google.com/protocol-buffers/docs/proto3#json).
 
 The proto3 JSON mapping is mostly straightforward, but you may want to pay attention to the rules for specifying a [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json).
