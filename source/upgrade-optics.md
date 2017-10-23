@@ -3,11 +3,11 @@ title: Upgrade from Optics Agent
 order: 11
 ---
 
-We introduced the Engine proxy architecture to enable support for more GraphQL server languages and to unlock features like Error reporting. 
+We introduced the Engine proxy architecture to enable support for more GraphQL server languages and to unlock features like Error reporting.
 
 If you're already using Optics, there's an easy upgrade from your current Optics integration to Engine - it's just a few lines of code in your `server.js` and an NPM package upgrade! If you are interested in using other languages, please see our other documentation pages.
 
-**This **guide assumes you are starting with **a Node.js app **that has Optics already instrumented.
+This guide assumes you are starting with a Node.js app that has Optics already instrumented.
 
 ## Remove Optics agent integration
 
@@ -83,7 +83,7 @@ app.use('/graphql', bodyParser.json(), graphqlExpress({
 
 **If using Express-GraphQL**
 
-Using Apollo Tracing with express-graphql requires more manual configuration. See [this section](https://github.com/apollographql/apollo-tracing-js#express-graphql) of the docs for details.
+Using Apollo Tracing with express-graphql requires more manual configuration. See [the README of `apollo-tracing-js`](https://github.com/apollographql/apollo-tracing-js#express-graphql) for details.
 
 ### Add Engine middleware code to your server
 
@@ -144,11 +144,9 @@ See [Node compression](/setup-node.html#\31 -Instrument-Node-Agent-with-Apollo-T
 
 ## Run in localhost to test
 
-Start the server in your localhost development environment.
-
-Run your GraphQL queries and check that they provide the results you expect.
-
-Check that they show up in your service report on engine.apollographql.com (http://engine.apollographql.com/).
+1. Start the server in your localhost development environment.
+2. Run your GraphQL queries and check that they provide the results you expect.
+3. Check that they show up in your service report in the [Engine UI](http://engine.apollographql.com/).
 
 ## Deploy to staging and production
 
