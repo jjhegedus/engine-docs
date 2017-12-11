@@ -9,7 +9,7 @@ If you hit any issues in setting up Engine for your GraphQL service, we're here 
 
 <h3> Check that you are on a supported GraphQL server </h3>
 
-Check that your server is one of the supported GraphQL servers listed [here](index.html#apollo-tracing).
+Check that your server is one of the supported GraphQL servers listed [here](index.md#apollo-tracing).
 
 If it is, please upgrade to the latest released versions of the GraphQL Server, Engine and Apollo packages.
 
