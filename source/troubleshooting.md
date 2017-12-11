@@ -27,7 +27,7 @@ apollo-tracing 0.0.9+
 
 <h3> Check for Engine configuration validity </h3>
 
-These are sample configurations for Engine based on the server environment you are using. A comprehensive documentation on the configurations are available [here](proto-doc.html)  Use these as a guide to validate your configuration.
+These are sample configurations for Engine based on the server environment you are using. A comprehensive documentation on the configurations are available [here](proto-doc.md)  Use these as a guide to validate your configuration.
 
 **Node sidecar**
 ```
